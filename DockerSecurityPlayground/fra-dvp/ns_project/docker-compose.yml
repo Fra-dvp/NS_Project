@@ -1,0 +1,53 @@
+version: '2'
+services:
+  Attacker:
+    image: 'dockersecplayground/alpine:latest'
+    stdin_open: true
+    tty: true
+    networks:
+      net1: {}
+    cap_add:
+      - NET_ADMIN
+  bot1:
+    image: 'kekko17m/botnet:latest'
+    stdin_open: true
+    tty: true
+    networks:
+      net1: {}
+      net2: {}
+  bot_n:
+    image: 'kekko17m/botnet:latest'
+    stdin_open: true
+    tty: true
+    networks:
+      net1: {}
+      net2: {}
+  scanner:
+    image: 'dockersecplayground/alpine:latest'
+    stdin_open: true
+    tty: true
+    networks:
+      net1: {}
+    cap_add:
+      - NET_ADMIN
+  cnc:
+    image: 'kekko17m/cnc:latest'
+    stdin_open: true
+    tty: true
+    networks:
+      net1: {}
+  victim:
+    image: 'httpd:latest'
+    stdin_open: true
+    tty: true
+    networks:
+      net2: {}
+networks:
+  net1:
+    ipam:
+      config:
+        - subnet: 171.17.0.1/24
+  net2:
+    ipam:
+      config:
+        - subnet: 173.17.0.1/24
