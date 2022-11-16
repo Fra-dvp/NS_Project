@@ -5,7 +5,7 @@ Progetto Network Security - Marino Francesco
 ![alt text](https://cdn.iconscout.com/icon/free/png-256/docker-2752207-2285024.png)
 ![alt text](https://code.visualstudio.com/assets/apple-touch-icon.png)
 ![alt text](https://cdn.iconscout.com/icon/free/png-256/python-2752092-2284909.png)
-![alt text](https://ibb.co/F7xfdRL)
+![alt text](https://secsi.io/resources/uploads/2021/09/docker-security-playground-768x435.png)
 ## Abstract 
 In questo progetto l’intento è quello di effettuare Scanning ed OS Detection di una rete al fine di creare una botnet per un attacco DDoS. 
 
